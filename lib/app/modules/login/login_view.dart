@@ -15,7 +15,7 @@ class LoginView extends GetView<LoginController> {
         child: VStack(
           [
             const Text(
-              'Employee CRUD',
+              'Employee CRUD Sample',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w500,

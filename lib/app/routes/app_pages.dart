@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:hire_test/app/extensions/string_extensions.dart';
+import 'package:hire_test/app/helper/preference_helper.dart';
 
 import '../modules/create_employee/create_employee_binding.dart';
 import '../modules/create_employee/create_employee_view.dart';
@@ -14,7 +16,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static final initial = PreferenceHelper.getUserToken().isNullOrEmpty ? Routes.HOME : Routes.LOGIN;
 
   static final routes = [
     GetPage(

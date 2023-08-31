@@ -16,7 +16,7 @@ Outcome ErrorInterceptorHandling({dynamic response, required Outcome result, Str
 
   switch (response.response?.statusCode) {
     case 400:
-      result.errorMessages = response.response?.data['message']; // commonly
+      result.errorMessages = response.response?.data['error']; // commonly
       throw ApiException(result.errorMessages);
     case 401:
       result.errorMessages = 'Session expired (401)';
@@ -39,7 +39,7 @@ Outcome ErrorInterceptorHandling({dynamic response, required Outcome result, Str
       }
       throw ApiException(result.errorMessages);
     case 500:
-      result.errorMessages = 'Internal Server Error (500)\n${response.response?.data['message']}';
+      result.errorMessages = 'Internal Server Error (500)\n${response.response?.data['error']}';
       throw ApiException(result.errorMessages);
     case 503:
       result.errorMessages = 'Service Unavailable (503)';

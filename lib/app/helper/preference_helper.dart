@@ -7,6 +7,8 @@ const _USER_TOKEN = 'USER_TOKEN';
 mixin PreferenceHelper {
   static final _pref = Get.find<GetStorage>();
 
-  static String getUserToken() => _pref.read(_USER_TOKEN);
+  static String? getUserToken() => _pref.read(_USER_TOKEN) as String?;
   static void setUserToken(String? token) => _pref.write(_USER_TOKEN, token);
+
+  static void resetData() => _pref.erase();
 }

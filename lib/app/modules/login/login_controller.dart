@@ -3,6 +3,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:hire_test/app/core/base/base_controller.dart';
+import 'package:hire_test/app/data/remote/api_exception.dart';
 import 'package:hire_test/app/data/request/login_entity.dart';
 import 'package:hire_test/app/data/response/token_entity.dart';
 import 'package:hire_test/app/helper/preference_helper.dart';
@@ -33,11 +34,12 @@ class LoginController extends BaseController {
 
       final response = TokenEntity.fromJson(value.body);
       PreferenceHelper.setUserToken(response.token);
-      Get.toNamed(Routes.HOME);
-    }).catchError((dynamic error) {
+      Get.offAllNamed(Routes.HOME);
+    }).catchError((error) {
+      var exception = error as ApiException;
       isLoading.value = false;
 
-      FlushbarHelper.createError(message: error).show(Get.context!);
+      FlushbarHelper.createError(message: exception.message).show(Get.context!);
     });
   }
 }
