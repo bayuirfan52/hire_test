@@ -16,7 +16,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static final initial = PreferenceHelper.getUserToken().isNullOrEmpty ? Routes.HOME : Routes.LOGIN;
+  static final initial = PreferenceHelper.getUserToken().isNullOrEmpty ? Routes.LOGIN : Routes.HOME;
 
   static final routes = [
     GetPage(

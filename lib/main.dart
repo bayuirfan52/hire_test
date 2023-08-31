@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GetMaterialApp(
-        title: 'Application',
+        title: 'Hire Test App',
         initialRoute: AppPages.initial,
         getPages: AppPages.routes,
         debugShowCheckedModeBanner: kDebugMode,
