@@ -2,15 +2,20 @@
 
 Hire test project
 
-## Getting Started
+## App Info
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter application. Created with version `3.7.3`
+- Use [Getx](https://pub.dev/packages/get) ecosystem
+- Use [VelocityX](https://pub.dev/packages/velocity_x) to build some widget easier
+- Use [Dio](https://pub.dev/packages/dio) as http client
+- REST API using https://reqres.in/
+- Functions that must be available in the application are:
+  ○ Authentication/login
+  ○ List of employees
+  ○ Employee details
+  ○ Create employees
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Authentication Info
+use this account when logging into the application according to the documentation provided at [Reqres.in](https://reqres.in/)
+- Email `eve.holt@reqres.in`
+- Password `cityslicka`
