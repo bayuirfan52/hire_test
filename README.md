@@ -15,7 +15,13 @@ This project is a starting point for a Flutter application. Created with version
   - Employee details
   - Create employees
 
-# Authentication Info
-use this account when logging into the application according to the documentation provided at [Reqres.in](https://reqres.in/)
+## Authentication Info
+Use this account when logging into the application according to the documentation provided at [Reqres.in](https://reqres.in/)
 - Email `eve.holt@reqres.in`
 - Password `cityslicka`
+
+## APK for testing
+Apk files already on [Release] (https://github.com/bayuirfan52/hire_test/releases). You can download & install apk file to real device.
+
+### Thank you
+### Regards
