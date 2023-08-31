@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -12,7 +13,12 @@ import 'package:hire_test/app/utils/logger.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
-  runZonedGuarded(() {
+  runZonedGuarded(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
     GetStorage.init();
     Get.lazyPut<GetStorage>(() => GetStorage());
     Get.put(
