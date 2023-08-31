@@ -21,7 +21,7 @@ Use this account when logging into the application according to the documentatio
 - Password `cityslicka`
 
 ## APK for testing
-Apk files already on [Release] (https://github.com/bayuirfan52/hire_test/releases). You can download & install apk file to real device.
+Apk files already on [Release](https://github.com/bayuirfan52/hire_test/releases). You can download & install apk file to real device.
 
 ### Thank you
 ### Regards
